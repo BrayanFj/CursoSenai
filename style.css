@@ -1,0 +1,25 @@
+body {
+    background-color: aquamarine;
+}
+
+.botao {
+    background-color: burlywood;
+    align-items: center;
+}
+
+.texto {
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(0, 145, 255);
+align-items: center;
+}
+
+.img {
+    align-items: center;
+    align-content: center;
+}
+
+button{
+    color: cornflowerblue;
+    border: 2px;
+}

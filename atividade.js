@@ -1,20 +1,27 @@
-alert("Bem vindo ao sistema!")
+document.addEventListener("DOMContentLoaded", () => {
+   
+    const botaoCalcular = document.getElementById("calcularNota");
 
-
-let nome = prompt("insira seu nome")
-let nota1 = (prompt("insira a primeira nota"))
-let nota2 =(prompt("insira a segunda nota"))  
-let nota3 = (prompt("Insira a terceira nota"))
-
-let media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
-
-if  (media >= 6)
-{
-    alert("nome do aluno:" + nome + "\n" + "\nSuas notas foram:\n" + nota1 +  "\n" + nota2 + "\n" + nota3 + "\n" + "sua a media final é: " + media + "\n" + "\nvoce passou de ano!! parabens")
   
-} else{
-    alert("nome do aluno:" + nome + "\nSuas notas foram:\n" + nota1 +  "\n" + nota2 + "\n" + nota3 + "\n" + "sua a media final é: " + media  + "\n" + "\nvoce reprovou")
+    function calcularNota() {
+        alert("Bem-vindo ao sistema!");
 
-}
+        let nome = prompt("Insira seu nome");
+        let nota1 = prompt("Insira a primeira nota");
+        let nota2 = prompt("Insira a segunda nota");
+        let nota3 = prompt("Insira a terceira nota");
 
-alert("Finalizando programa")
+        let media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
+
+        if (media >= 6) {
+            alert("Nome do aluno: " + nome + "\n" + "\nSuas notas foram:\n" + nota1 + "\n" + nota2 + "\n" + nota3 + "\n" + "Sua média final é: " + media + "\n" + "\nVocê passou de ano! Parabéns");
+        } else {
+            alert("Nome do aluno: " + nome + "\nSuas notas foram:\n" + nota1 + "\n" + nota2 + "\n" + nota3 + "\n" + "Sua média final é: " + media + "\n" + "\nVocê reprovou");
+        }
+
+        alert("Finalizando programa");
+    }
+
+    
+    botaoCalcular.addEventListener("click", calcularNota);
+});
